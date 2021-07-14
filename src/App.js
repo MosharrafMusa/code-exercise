@@ -5,13 +5,22 @@ import './App.css';
 function App() {
   const [count, setCount] = useState(0);
 
-  
+  function increaseCount (){
+       setCount (count => count +1)
+  }
+
+  function decreaseCount (){
+    setCount (count => count -1)
+}
+
+
+
 
   return (
     <div className="App">
       <h1>{count}</h1>
-      <button onClick={()=>setCount(count+1)}>+</button>
-      <button onClick={()=>setCount(count-1)}>-</button>
+      <button onClick={increaseCount}>+</button>
+      <button onClick={decreaseCount}>-</button>
     </div>
   );
 }
