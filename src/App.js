@@ -1,12 +1,17 @@
-import logo from './logo.svg';
+import React, {useState} from 'react'
 import './App.css';
-import Counter from './components/Counter'
+
 
 function App() {
+  const [count, setCount] = useState(0);
+
+  
+
   return (
     <div className="App">
-      <h1>welcome from my app!</h1>
-      <Counter/>
+      <h1>{count}</h1>
+      <button onClick={()=>setCount(count+1)}>+</button>
+      <button onClick={()=>setCount(count-1)}>-</button>
     </div>
   );
 }
